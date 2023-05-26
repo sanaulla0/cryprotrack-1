@@ -1,0 +1,264 @@
+.list-row{
+   display: flex;
+   justify-content:space-between;
+   align-items: center;
+   gap: 0.5rem;
+  margin: 2rem 1.5rem;
+  padding: 1rem;
+  border-radius: 2rem ;
+}
+.list-row:hover {
+     background-color: var(--lightdark);
+     transition: all 0.3s;
+}
+.list-row td {
+   text-align: left;
+   width: 15%;
+}
+.coin-price{
+     min-width: 100px;
+}
+
+.td-image{
+ width: 3rem !important;
+ margin-right:0.5rem;
+}
+.td-center-align{
+     text-align: center;
+}
+.td-right-align{
+   text-align: right;
+}
+.mobile-td-mkt{
+ display: none;
+}
+@media  only screen and (max-width:1100px) {
+   .td-icon{
+      display: none;
+   }
+   .list-row{
+        width: auto;
+        gap: 0.4rem;
+   }
+   .td-image{
+         width: 2rem;
+   }
+ 
+}
+@media  only screen and (max-width:1024px) {
+   .td-vol{
+      display: none;
+   }
+   .desktop-td-mkt{
+      display: none;
+     }
+     .mobile-td-mkt {
+      display: block;
+     }
+ 
+}
+@media only screen and (max-width:800px){
+   .desktop-td-mkt{
+      display: none;
+     }
+     .mobile-td-mkt {
+      display: block;
+     }
+   
+   .list-row td {
+      text-align: left;
+      width: 12%;
+   }
+   .td-right-align{
+       margin-right: 1px;
+   }
+   .coin-price{
+   font-size: 1rem;
+    font-weight: 600;
+    margin-left: 2.8rem;
+   }
+}
+/* .star-icon-green{
+   background-color: var(--dark);
+   border: none;
+color: green;
+cursor: pointer;
+
+}
+.star-icon-green:hover{
+ 
+     color: var(--green);
+     cursor: pointer;
+}
+.star-icon-red{
+   background-color: var(--dark);
+   border: none;
+   color: var(--red);
+   cursor: pointer;
+   
+}
+.star-icon-red:hover{
+   color: red;
+   cursor: pointer;
+  
+} */
+@media only screen and (max-width:600px){
+   .list-row{
+      display: flex;
+      justify-content:space-between;
+      align-items: center;
+      gap: 0.5rem;
+     margin-right: 5rem ;
+     padding: 0.5rem;
+     border-radius: 2rem ;
+   }
+   .coin-price{
+      font-size: 1.2rem;
+       font-weight: 400;
+       margin-right: 1.5rem;
+      }
+      .td-right-align{
+         font-size: 1.2rem;
+         font-weight: 400;
+         margin-left: 1px;
+     }
+     .td-image{
+      width: 2.5rem !important;
+   
+     }
+     .name-col{
+         font-size: smaller;
+     }
+     .chip-flex{
+      font-size: 1.2rem;
+     }
+     
+}
+@media only screen and (max-width:470px){
+   .list-row{
+      display: flex;
+      justify-content:space-around;
+      align-items: center;
+      gap: 0.5rem;
+/*       
+     margin-right: 9rem ; */
+     border-radius: 2rem ;
+   }
+   .list-row td {
+      text-align: left;
+      width: 5%;
+   }
+   .grey-wrapper{
+     
+        padding: 0rem 1.5rem;
+   
+   }
+   .coin-price{
+      font-size: 1rem;
+       font-weight: 600;
+       margin-right: 1.2rem;
+      }
+      .td-right-align{
+         font-size: 0.8rem;
+         font-weight: 600;
+         margin-left: 10px;
+     }
+     .td-center-align{
+      text-align: center;
+      font-size: small;
+ }
+     .td-image{
+      width: 2rem !important;
+   
+     }
+     .name-col{
+         font-size: smaller;
+     }
+     .chip-flex{
+      font-size: 0.5rem;
+   
+     }
+     .price-chip{
+      min-width: 15px;
+      text-align: center;
+      margin: 10px;
+     }
+     
+     .coin-symbol{
+      font-size: small;
+    }
+  .coin-name{
+   font-size: small;
+  }    
+ 
+}
+@media only screen and (max-width:380px){
+   .list-row{
+       width: 65%;
+       align-items: center;
+   }
+   
+   .td-center-align{
+      text-align: center;
+ }
+ .chip-flex{
+   font-size: 0.7rem;
+  
+  }
+  .coin-price{
+   font-size: 0.8rem;
+    font-weight: 600;
+    margin-right: 0.6rem;
+   }
+   .coin-name{
+      font-size: x-small;
+     }    
+
+}
+  @media only screen and (max-width:340px){
+   .list-row{
+      display: flex;
+      justify-content:space-around;
+      align-items: center;
+     margin-right: 3rem ;
+     border-radius: 2rem ;
+     width:58%;
+   }
+   .list-row td {
+      text-align: left;
+      width: 5%;
+   }
+   .grey-wrapper{
+      background-color: var(--lightdark);
+      width: 100%;
+      margin: 0.8rem;
+        border-radius: 0.8rem;
+       
+   } 
+   .td-image{
+      width: 1.5rem !important;
+      margin-left: 1rem;
+   
+     }
+     .name-col{
+         font-size: x-small;
+     }
+     .td-center-align{
+      text-align: right;
+ }
+ .chip-flex{
+   font-size: 0.5rem;
+    
+  }
+  
+  .coin-price{
+   font-size: 0.7rem;
+    font-weight: 600;
+    margin-right: 0.6rem;
+   }
+   .price-chip-red{
+      margin: 10px;
+    padding: 0.3rem 0.5rem;
+}
+   }
+

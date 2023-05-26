@@ -1,0 +1,21 @@
+.footer{
+ position: fixed;
+ bottom: 0;
+ left: 0;
+ right: 0;
+  background-color: var(--darkGreay);
+  margin-bottom: 0rem;
+  padding: 0;
+  
+}
+.footer-nav{
+       display: flex;
+       justify-content: space-around;
+       color: rgb(238, 222, 222);
+       text-align: start;
+       align-items: flex-start;
+       font-size: xx-small;
+}
+.para{
+    
+}

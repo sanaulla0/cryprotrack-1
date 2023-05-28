@@ -65,7 +65,7 @@ useEffect(() => {
      </div>
      
      <div className='heart' onClick={handleAddToWatchlist}>
-         {flag ? <Iconic  />   : <FavoriteIcon />}
+         {flag ? <Iconic  />   :  < FavoriteIcon />}
          </div>
     </div>
     {coin.price_change_percentage_24h > 0 ? (

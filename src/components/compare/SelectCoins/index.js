@@ -10,7 +10,8 @@ const[allCoins , setAllCoins] = useState([]);
 
 
  const styles = {
-  height: "2.5rem",
+  height: "2rem",
+
         color: "var(--white)",
         "& .MuiOutlinedInput-notchedOutline": {
           borderColor: "var(--white)",
@@ -38,7 +39,7 @@ useEffect(()=>{
 
   return (
     <div className='coins-flex'>
-     <p>Crypto 1</p>
+     <p className='p'>Crypto 1</p>
        <Select
         sx={styles}
 
@@ -53,7 +54,7 @@ useEffect(()=>{
           
           
         </Select>
-        <p>Crypto 2</p>
+        <p className='p'>Crypto 2</p>
        <Select
         sx={styles}
 

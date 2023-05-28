@@ -89,10 +89,16 @@ min-width: 250px;
         margin-top: 3rem;
    }
    .iphone{
-       left: -2rem;
+    position: absolute;
+       left: 1rem;
+       width: 40%;
+       min-width: 200px;
    }
    .gradient{
+    position: absolute;
      left: 25%;
+     
+     min-width: 150px;
    }
 
    .track-crypto-heading,
@@ -112,6 +118,21 @@ min-width: 250px;
 }
 
 }
+@media only screen and (max-width:450px){
+    .iphone{
+        position: absolute;
+         z-index: 1; 
+        min-width: 200px;
+        width: 50%;
+        
+    }
+    .gradient{
+        position: absolute;
+        min-width: 140px;
+           top: 6rem; 
+        }
+
+}
 
 @media only screen and (max-width:380px){
 
@@ -128,6 +149,20 @@ min-width: 250px;
     text-align: center;
     
 }
+.iphone{
+    position: absolute;
+    min-width: 150px;
+    width: 40%;
+   left: 2rem;
+    
+}
+.gradient{
+    position: relative;
+    min-width: 90px;
+       top: 6rem; 
+       left: 4rem;
+    }
+
 }
 
 @media only screen and (max-width:340px){

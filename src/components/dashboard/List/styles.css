@@ -72,6 +72,16 @@
    .td-right-align{
        margin-right: 1px;
    }
+   .price-chip{
+      min-width: 35px;
+      border-radius: 1rem 0rem 1rem;
+      text-align: center;
+      margin: 10px;
+     }
+     .price-chip-red{
+      border-radius: 1rem 0rem 1rem;
+     
+  }
    .coin-price{
    font-size: 1rem;
     font-weight: 600;
@@ -134,7 +144,7 @@ cursor: pointer;
      }
      
 }
-@media only screen and (max-width:470px){
+@media only screen and (max-width:430px){
    .list-row{
       display: flex;
       justify-content:space-around;
@@ -146,13 +156,16 @@ cursor: pointer;
    }
    .list-row td {
       text-align: left;
-      width: 5%;
+      width: 3%;
    }
    .grey-wrapper{
-     
-        padding: 0rem 1.5rem;
-   
+     width: auto;
+       
    }
+   .heart{
+         margin-right:1rem ;
+   }
+
    .coin-price{
       font-size: 1rem;
        font-weight: 600;
@@ -168,8 +181,8 @@ cursor: pointer;
       font-size: small;
  }
      .td-image{
-      width: 2rem !important;
-   
+      width: 1.8rem !important;
+      margin-left: 0.6rem
      }
      .name-col{
          font-size: smaller;
@@ -179,7 +192,8 @@ cursor: pointer;
    
      }
      .price-chip{
-      min-width: 15px;
+      
+      border-radius: 1rem 0rem 1rem;
       text-align: center;
       margin: 10px;
      }
@@ -194,16 +208,22 @@ cursor: pointer;
 }
 @media only screen and (max-width:380px){
    .list-row{
-       width: 65%;
+       width: 68%;
        align-items: center;
    }
    
    .td-center-align{
       text-align: center;
+      margin-left: 3rem;
  }
  .chip-flex{
-   font-size: 0.7rem;
+   text-align: center;
   
+  }
+  .td-image{
+   width: 1.5rem !important;
+   margin-left: 0.8rem !important;
+
   }
   .coin-price{
    font-size: 0.8rem;
@@ -213,6 +233,10 @@ cursor: pointer;
    .coin-name{
       font-size: x-small;
      }    
+     .heart{
+      margin-right:1.5rem ;
+     
+}
 
 }
   @media only screen and (max-width:340px){
@@ -222,11 +246,11 @@ cursor: pointer;
       align-items: center;
      margin-right: 3rem ;
      border-radius: 2rem ;
-     width:58%;
+    
    }
    .list-row td {
       text-align: left;
-      width: 5%;
+      width: 1.5%;
    }
    .grey-wrapper{
       background-color: var(--lightdark);
@@ -237,7 +261,7 @@ cursor: pointer;
    } 
    .td-image{
       width: 1.5rem !important;
-      margin-left: 1rem;
+      margin-left: 0.5rem !important;
    
      }
      .name-col{
@@ -256,9 +280,12 @@ cursor: pointer;
     font-weight: 600;
     margin-right: 0.6rem;
    }
-   .price-chip-red{
+   /* .price-chip-red{
       margin: 10px;
     padding: 0.3rem 0.5rem;
-}
+} */
+.coin-symbol{
+   font-size: x-small;
+ }
    }
 

@@ -4,6 +4,8 @@ import TabsComponent from '../components/dashboard/tabs';
 import { get100Coins } from "../functions/get100Coins";
 import Button from "../components/common/Button";
 import { Link } from "react-router-dom";
+import Footer from "../components/common/Footer";
+
 function Watchlist() {
   const watchlist = JSON.parse(localStorage.getItem("watchlist"));
   const [coins, setCoins] = useState([]);
@@ -45,6 +47,8 @@ function Watchlist() {
           </div>
         </div>
       )}
+
+<Footer />
     </div>
   );
 }

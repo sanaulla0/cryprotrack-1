@@ -16,7 +16,7 @@
 }
 .heart{
       display: flex;
-     margin-left: 2rem;
+     margin-left: 2.5rem;
     
        color: var(--red);
 }
@@ -26,6 +26,10 @@
     width: 270px;
     height: 270px;
     }
+    .price-chip-red{
+        border-radius: 1rem 0rem 1rem;
+    }
+
 }
 
 .info-flex{
@@ -67,7 +71,7 @@
 }
 .price-chip{
      border: 2px solid var(--green);
-     border-radius: 1rem;
+    border-radius: 1rem;
      padding: 0.3rem 1rem;
      text-align: center;
      font-weight: 600;
@@ -80,6 +84,7 @@
     padding: 0.3rem 1rem;
     text-align: center;
     font-weight: 600;
+    margin-left: 1rem;
     color: var(--red);
 }
 .price-chip-red:hover{
@@ -175,7 +180,7 @@
         margin: 1rem;
    }
 }
-@media only screen and(max-width:350px) {
+@media only screen and(max-width:330px) {
     .grid-container{
         width: 15px;
         height: 80px;
@@ -185,6 +190,7 @@
             height: 0.7rem;
             width: 600rem;
            }
+           
 }
 .star-icon-green{
     background-color: var(--darkGreay);

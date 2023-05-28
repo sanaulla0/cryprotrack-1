@@ -17,3 +17,11 @@
         width: 98%;
    }
 }
+.msg{
+     font-size: x-large;
+     font-style: oblique;
+     text-align: center;
+     display: flex;
+     justify-content: center;
+     width: 100vw;
+}

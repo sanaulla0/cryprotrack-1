@@ -8,8 +8,10 @@ import { addToWatchlist } from '../../../functions/addToWatchlist';
 import StarsIcon from '@mui/icons-material/Stars';
 import Iconic from '../../Starbutton';
 import { removeFromWatchlist } from '../../../functions/removeFromWatchlist';
-import { color } from 'framer-motion';
+import { color, delay } from 'framer-motion';
 import FavoriteIcon from '@mui/icons-material/Favorite';
+import {motion} from 'framer-motion';
+import Footer from '../../common/Footer';
 
 
 const Gridd = ({coin}) => {
@@ -41,11 +43,18 @@ useEffect(() => {
 
 
   return (
+    
     <Link to={`/coin/${coin.id}`}>
-    <div 
+    <motion.div 
     className = {`grid-container ${
       coin.price_change_percentage_24h < 0 && "grid-container-red"
-      }`}>
+      }`}
+      initial = {{opacity:0 ,y:100}}
+      whileInView={{opacity:1,y:0}}
+        viewport={{once:true}}
+        transition={{type:"spring" , duration:1 ,delay:0.25 + delay * 0.1 }}
+
+      >
         
   <div className='info-flex'>
     <img src={coin.image} className='coin-logo' />
@@ -94,9 +103,13 @@ useEffect(() => {
      <p className='total_vol'>Market Cap : {coin.market_cap.toLocaleString()}</p>
     </div>
    
-    </div>
+    </motion.div>
+
+    <Footer />
     </Link>
-   
+     
+      
+    
   )
 }
 

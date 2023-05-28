@@ -60,7 +60,7 @@ img {
   display: block;
   background-color: var(--lightdark);
   width: 90%;
-  margin: 1.5rem auto;
+  margin: 1rem;
     border-radius: 0.8rem;
     padding: 0rem 1rem;
 }
@@ -79,11 +79,4 @@ img {
   align-items: center;
   margin: 1.5rem;
   gap: 2rem;
-}
-@media only screen and(max-width:600px) {
-  
-  .coins-flex {
-      display: none;
-  }
-  
 }

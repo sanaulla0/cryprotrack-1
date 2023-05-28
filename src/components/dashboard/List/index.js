@@ -11,6 +11,8 @@ import Iconic from '../../Starbutton';
 import {toast} from 'react-toastify';
 import { addToWatchlist } from '../../../functions/addToWatchlist';
 import { removeFromWatchlist } from '../../../functions/removeFromWatchlist';
+import { delay, motion } from 'framer-motion'; 
+import Footer from '../../common/Footer';
 
 const List = ({coin}) => {
   const [flag,setFlag] = useState(true);
@@ -41,7 +43,15 @@ useEffect(() => {
   return (
       <Link to={`/coin/${coin.id}`}>
        
-    <tr className='list-row' >
+    <motion.tr className='list-row'
+       initial = {{opacity:0, x:-30}}
+       whileInView = {{opacity:1 , x:0}}
+       viewport = {{once:true}}
+        
+       transition={{
+        type:"spring",
+        duration:1 , delay:0.25 + delay * 0.1}}
+    >
      <Tooltip title="Logo" placement='bottom-start' >
        <td className='info-flex'>
     <img src={coin.image} className='td-image' />
@@ -112,8 +122,8 @@ useEffect(() => {
          {flag ? <Iconic  />   : <FavoriteIcon />}
          </td>
     
-    </tr>
-   
+    </motion.tr>
+    <Footer />
     </Link>
   )
 }

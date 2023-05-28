@@ -5,13 +5,18 @@ align-items: center;
  gap: 1.5rem;
  margin: 0rem 1.5rem;
 }
-@media only screen and(max-width:435px) {
- .coins-flex{
-    margin-right: 10rem;
-    gap:0.5rem
-    }
-    .coins-flex p{
- display: none;
-}
+ 
+   .p {
+       font-size: larger;
+   }
+   @media only screen and (max-width:600px) {
+      .p {
+         display: none;
+      }
+      .coins-flex{
+         margin: 0;
+      gap: 1rem;
+      }
+     
+   }
 
-}

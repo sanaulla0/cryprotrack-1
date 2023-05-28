@@ -35,10 +35,15 @@
 
 @media only screen and (max-width:800px)  {
   .navbar{
-    padding: 1.5rem;
+    padding: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
  .Links{
    display: none; 
+ }
+ .Link{
+  font-size: 1rem;
  }
    .mobile-drawer{
     display: block;
@@ -47,13 +52,12 @@
     width: 40vw;
     height: 100vh;
     background-color: var(--skyblue);
-
     padding: 20px;
 }
  
 }
 
-@media only screen and (max-width:380px)  {
+@media only screen and (max-width:430px)  {
   .navbar{
     padding: 1rem;
     align-items: center;
@@ -64,3 +68,15 @@
    }
 
 }
+@media only screen and (max-width:380px)  {
+  .navbar{
+    padding: 1rem;
+    align-items: center;
+    width: fit-content;
+  }
+  .mobile-drawer{
+     margin-left: 8rem;
+   }
+
+}
+

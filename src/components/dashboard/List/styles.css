@@ -174,7 +174,7 @@ cursor: pointer;
       .td-right-align{
          font-size: 0.8rem;
          font-weight: 600;
-         margin-left: 10px;
+         /* margin-left: 10px; */
      }
      .td-center-align{
       text-align: center;

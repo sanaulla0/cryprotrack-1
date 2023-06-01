@@ -5,13 +5,12 @@ import iphone from '../../../assets/iphone.080029ada53f0cd57453 (1).png';
 import gradient from '../../../assets/gradient.12a666ed10b3b442b534.png';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { RWebShare } from "react-web-share";
 import {toast} from 'react-toastify'
 const MainComponent = () => {
   const handleshare = ()=>{
    
     navigator.share({
-      text: "CryptoDashboard made by Umesh Golani using React JS.",
+      text: "CryptoDashboard made by Sanaulla using React JS.",
       url: "https://main--rainbow-cassata-47cf9f.netlify.app/",
       title: "CryptoTracker.",
     })

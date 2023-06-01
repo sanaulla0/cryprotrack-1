@@ -1,54 +1,45 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import './styles.css';
 import TemporaryDrawer from './Drawer';
 import Button from '../Button';
 import { Link } from 'react-router-dom';
 import Switch from '@mui/material/Switch';
+const storedTheme = localStorage.getItem('theme');
 
 const Header = () => {
-  const setDark = () => {
-    localStorage.setItem("theme", "dark");
-    document.documentElement.setAttribute("data-theme", "dark");
-  };
+  const [darkTheme, setDarkTheme] = useState(false);
 
-  const setLight = () => {
-    localStorage.setItem("theme", "light");
-    document.documentElement.setAttribute("data-theme", "light");
-  };
-
-  const storedTheme = localStorage.getItem("theme");
-
-  const prefersDark =
-    window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-  const defaultDark =
-    storedTheme === "dark" || (storedTheme === null && prefersDark);
-
-    const [darkTheme, setDarkTheme] = useState(defaultDark);
-
-  if (defaultDark) {
-    setDark();
-  }
-
-  const toggleTheme = (e) => {
-    if (!darkTheme) {
-      setDark();
-    } else {
-      setLight();
+  useEffect(() => {
+    const storedTheme = localStorage.getItem('theme');
+    if (storedTheme === 'dark') {
+      setDarkTheme(true);
     }
+  }, []);
+
+  const toggleTheme = () => {
     setDarkTheme(!darkTheme);
   };
+
+  useEffect(() => {
+    if (darkTheme) {
+      localStorage.setItem('theme', 'dark');
+      document.body.classList.add('dark');
+      document.body.classList.remove('light');
+    } else {
+      localStorage.setItem('theme', 'light');
+      document.body.classList.add('light');
+      document.body.classList.remove('dark');
+    }
+  }, [darkTheme]);
   return (
     <div className='navbar'>
        <Link to='/' ><h1 className='logo'>CryptoTraker<span style={{color:"var(--blue)"}}>.</span></h1></Link>
       <div className='Links'>
-        <Switch 
-         defaultChecked
-             value={!darkTheme}
-             onClick={() => toggleTheme()}
-        />
-      <Link to='/'   ><p className='Link'>Home</p></Link>
+      <Switch
+  checked={darkTheme} onChange={toggleTheme}
+  inputProps={{ 'aria-label': 'controlled' }}
+/>
+      <Link to='/' ><p className='Link'>Home</p></Link>
        <Link to='/Compare'><p className='Link'>Compare</p></Link>
        <Link to='/WatchList'><p className='Link'> WatchList</p></Link> 
        <Link to='/Dashboard'>

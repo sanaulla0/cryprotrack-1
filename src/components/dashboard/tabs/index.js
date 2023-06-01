@@ -15,7 +15,7 @@ export default function TabsComponent({coins}) {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-  const style={
+  const style={ 
             color : "var(--white)",
             width : "50vw",
             fontSize : "1.2rem",
